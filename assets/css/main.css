@@ -3289,7 +3289,7 @@ ul.actions.special {
 	top: calc(50% - 8px);
 	right: -8px;
 	background: #ffffff;
-	border: 2px solid #2200ff;
+	border: 2px solid #002699;
 	border-radius: 16px;
 	z-index: 1;
 }
@@ -3329,11 +3329,11 @@ ul.actions.special {
 }
 
 .container-tl.left .date {
-	right: -75px;
+	right: -100px;
 }
 
 .container-tl.right .date {
-	left: -75px;
+	left: -100px;
 }
 
 .container-tl .icon {
@@ -3365,8 +3365,8 @@ ul.actions.special {
 	background: #ffffff00;
 	position: relative;
 	border-radius: 30px;
-	border-style: solid;
-	border-color: #2200ff;
+	border-style: outset;
+	border-color: #002699;
 	border-width: 10px;
 
 }
