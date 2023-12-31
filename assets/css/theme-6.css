@@ -13518,7 +13518,7 @@ body {
     position: relative;
     padding: 0 20px 5px;
     margin-bottom: 10px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #878787;
     margin-left: 20px
 }
 
@@ -13530,7 +13530,7 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #3498db;
+    background-color: #878787;
 }
 
 .timeline-date {
@@ -13579,7 +13579,6 @@ body {
 }
 
 .timeline-skills strong {
-    color: #333;
+    color: #999;
     margin-right: 5px;
 }
--
