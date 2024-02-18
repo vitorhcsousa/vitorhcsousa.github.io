@@ -13582,3 +13582,34 @@ body {
     color: #999;
     margin-right: 5px;
 }
+
+
+/* Add this CSS to style the expanders */
+.expander-content {
+    margin-top: 30px;
+}
+
+.expander-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.expander-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.expander-details {
+    display: none;
+}
+
+.expander-details-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.expander-info {
+    margin-bottom: 5px;
+}
