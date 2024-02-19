@@ -13575,7 +13575,7 @@ body {
 .timeline-skills {
     margin-top: 10px;
     font-size: 14px;
-    color: #555;
+    color: #fab98d;
 }
 
 .timeline-skills strong {
@@ -13583,33 +13583,13 @@ body {
     margin-right: 5px;
 }
 
-
-/* Add this CSS to style the expanders */
-.expander-content {
-    margin-top: 30px;
+.expander {
+    position: relative !important; /* Ensure relative positioning */
+    margin-bottom: 10px; /* Add margin to create space between expanders */
 }
 
-.expander-item {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-.expander-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.expander-details {
-    display: none;
-}
-
-.expander-details-content {
-    display: none;
-    margin-top: 10px;
-}
-
-.expander-info {
-    margin-bottom: 5px;
+.expander + .isotope-item {
+    
+    position: relative !important; /* Ensure relative positioning */
+    clear: both; /* Clear any floating elements after the expander */
 }

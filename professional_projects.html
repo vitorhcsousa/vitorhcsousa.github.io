@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Vitor Sousa</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+	<!-- FontAwesome JS -->
+	<script defer src="assets/fontawesome/js/all.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			google: {
+				families: [
+					"Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic",
+					"Space Grotesk:regular"
+				]
+			}
+		});
+	</script>
+	<script>
+		// Wait for the document to be fully loaded
+		document.addEventListener('DOMContentLoaded', function () {
+			// Get all project expanders
+			var expanders = document.querySelectorAll('.expander');
+
+			// Get all filter buttons
+			var filterButtons = document.querySelectorAll('#filters li');
+
+			// Add click event listener to each filter button
+			filterButtons.forEach(function (button) {
+				button.addEventListener('click', function () {
+					var category = button.getAttribute('data-filter');
+
+					// Loop through all expanders
+					expanders.forEach(function (expander) {
+						// If the expander's category matches the selected category or the category is "All", display it, otherwise hide it
+						if (category === '*' || expander.classList.contains(category)) {
+							expander.style.display = 'block';
+						} else {
+							expander.style.display = 'none';
+						}
+					});
+
+					// Remove active class from all filter buttons
+					filterButtons.forEach(function (btn) {
+						btn.classList.remove('active');
+					});
+
+					// Add active class to the clicked filter button
+					button.classList.add('active');
+				});
+			});
+		});
+	</script>
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme-6.css">
+
+</head>
+
+<body oncontextmenu="return false;">
+
+	<header class="header text-center">
+		<div class="force-overflow">
+			<nav class="navbar navbar-expand-lg navbar-dark">
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+					aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div id="navigation" class="collapse navbar-collapse flex-column">
+					<div class="profile-section pt-3 pt-lg-0">
+						<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png"
+							alt="image">
+
+						<div class="bio mb-3"> Vitor Sousa <br>
+							<a>Data Scientist </a></div>
+						<!--//bio-->
+						<ul class="social-list list-inline py-2 mx-auto">
+							<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a>
+							</li>
+							<li class="list-inline-item"><a href="https://www.linkedin.com/in/vitorhcsousa/"
+									target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+
+							<li class="list-inline-item"><a href="https://github.com/vitorhcsousa" target="_blank"><i
+										class="fa-brands fa-github"></i></a></li>
+
+						</ul>
+						<!--//social-list-->
+
+
+						<hr>
+					</div>
+					<!--//profile-section-->
+
+
+					<ul class="navbar-nav flex-column text-start">
+						<li class="nav-item">
+							<a class="nav-link scrollto active" href="index.html"><i
+									class="fas fa-user fa-fw me-2"></i>About
+								Me<span class="sr-only"></span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link scrollto" href="portfolio.html"><i
+									class="fas fa-laptop-code fa-fw me-2"></i>Professional</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a class="nav-link scrollto" href="services.html"><i
+									class="fas fa-briefcase fa-fw me-2"></i>Services
+								&amp; Pricing</a>
+						</li> -->
+						<li class="nav-item">
+							<a class="nav-link scrollto" href="resume.html"><i
+									class="fas fa-file-alt fa-fw me-2"></i>Resume</a>
+						</li>
+					</ul>
+
+
+
+				</div>
+			</nav>
+		</div>
+		<!--//force-overflow-->
+	</header>
+
+	<div class="main-wrapper">
+		<section class="cta-section theme-bg-light py-5">
+			<div class="container text-center single-col-max-width">
+				<h5 class="heading">Professional Projects</h5>
+				<div class="intro">
+					<p>Welcome to my professional projects portfolio. Here, I'll delve into my background and
+						accomplishments as a data scientist, highlighting my expertise in leveraging data to drive
+						insights and create impactful solutions.
+
+						With a solid foundation in statistical analysis, machine learning, and data manipulation
+						techniques, I thrive in projects that demand a blend of analytical rigor and creativity. Whether
+						working independently or as part of a team, I am committed to delivering robust and innovative
+						solutions that address complex data challenges.</p>
+				</div>
+
+
+
+			</div>
+			<!--//container-->
+		</section>
+		<section class="projects-list px-3 py-5 p-md-5">
+			<div class="container">
+				<div class="text-center">
+					<ul id="filters" class="filters mb-5 mx-auto   ps-0">
+						<li class="type active mb-3 mb-lg-0" data-filter="*">All</li>
+						<li class="type  mb-3 mb-lg-0" data-filter="vk">Primavera BSS</li>
+						<li class="type  mb-3 mb-lg-0" data-filter="mc">Sonae MC</li>
+						<li class="type  mb-3 mb-lg-0" data-filter="ff">FARFETCH</li>
+					</ul>
+					<!--//filters-->
+				</div>
+				<div class="project-expanders">
+					<!-- Expander 1 -->
+					<div class="expander col-md-12 mb-5 cat1 cat2 cat3 vk">
+						<div class="card project-card">
+							<button class="expander-btn btn btn-link" type="button" data-bs-toggle="collapse"
+								data-bs-target="#expander-1" aria-expanded="false" aria-controls="expander-1">
+								<h4 class="card-title">Predict Time to Failure and Probability to Failure in next x days
+								</h4>
+							</button>
+							<div class="collapse" id="expander-1">
+								<div class="card-body">
+									<section id="overview">
+										<h5>Project Overview</h5>
+										<p>The primary objective of this project was to develop a predictive maintenance
+											solution utilizing advanced Machine Learning techniques. Our focus was on
+											predicting the time to failure and the probability of failure within a
+											specified timeframe for industrial assets.</p>
+									</section>
+
+									<section id="role-contributions">
+										<h5>My Role and Contributions</h5>
+										<p>I played a pivotal role in two key teams throughout the project: the Data
+											Engineering team and the Data Science & Machine Learning team. Serving as
+											the primary technical liaison between the Valuekeep product team and the
+											Computer Graphics Centre (CCG) at the University of Minho, I facilitated
+											seamless collaboration and knowledge exchange between the teams.</p>
+										<h5>Data Engineering</h5>
+										<p>Within the Data Engineering team, I was responsible for designing and
+											implementing data capture and storage mechanisms within Azure Data Lake. I
+											developed robust data pipelines for efficient transformation and processing
+											using tools such as Azure Data Factory and Databricks, crucial for handling
+											large volumes of data generated by industrial assets.</p>
+										<h5>Machine Learning and Data Science</h5>
+										<p>In collaboration with the Data Science and Machine Learning team, we
+											conducted comprehensive descriptive, exploratory, and causal analyses of the
+											collected data. Our focus then shifted towards implementing Machine Learning
+											models to achieve two key objectives:</p>
+										<ol>
+											<li><strong>Prediction of Time to Failure:</strong> Approaching this as a
+												regression problem, we aimed to predict the number of time units until
+												the next asset failure. Utilizing advanced algorithms and feature
+												engineering techniques, we developed models capable of providing
+												accurate estimates for proactive maintenance planning.</li>
+											<li><strong>Probability of Asset Failure:</strong> This aspect was treated
+												as a binary classification problem. By employing various classification
+												algorithms and rigorously evaluating model performance, we successfully
+												estimated the probability of asset failure within predefined time
+												windows. This insight empowered stakeholders to prioritize maintenance
+												tasks and mitigate potential downtime risks effectively.</li>
+										</ol>
+										<p>To execute any ML model, we split the data, with 75% of the records used for
+											training and 25% for testing.</p>
+										<h6>Regression Models:</h6>
+										<ul>
+											<li>Support Vector Machines (SVM) Regressor</li>
+											<li>Random Forest Regressor</li>
+											<li>K-Nearest Neighbors (K-NN) Regressor</li>
+											<li>Gradient Boosting Regressor</li>
+											<li>Multi-layer Perceptron (MLP) Regressor</li>
+										</ul>
+										<p>Model performance evaluation was based on the Mean Absolute Error (MAE)
+											metric.</p>
+
+										<h6>Classification Models</h6>
+										<ul>
+											<li>Support Vector Machines (SVM) Classifier</li>
+											<li>Random Forest Classifier</li>
+											<li>K-Nearest Neighbors (K-NN) Classifier</li>
+											<li>Logistic Regression</li>
+											<li>Multi-layer Perceptron (MLP) Classifier</li>
+										</ul>
+										<p>Classification model evaluation utilized the F1 score metric.</p>
+
+										<h6>Auto ML</h6>
+										<p>In addition to manual model selection and tuning, we explored the Auto ML
+											approach using the H2O tool. The objective was to compare the results
+											obtained from our models with those generated by H2O, which tests various
+											models with diverse configurations.</p>
+									</section>
+
+									<section id="outcome">
+										<h5>Outcome</h5>
+										<p>The collaborative efforts between the Valuekeep product team, the CCG, and
+											our teams resulted in the successful development and deployment of a robust
+											predictive maintenance solution. By accurately predicting time to failure
+											and assessing the probability of asset failure, our solution enabled
+											proactive maintenance strategies, significantly reducing unplanned downtime
+											and maintenance costs for our clients.</p>
+									</section>
+
+									<div class="timeline-skills">
+										<p><strong>Skills:</strong> Databricks, Python, Pandas, PySpark, scikit learn,
+											xgboost, SQL, Git, Azure Data Factory, AutoML </p>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<!--//card-->
+					</div>
+					<!--//expander-->
+
+					<div class="expander col-md-12 mb-5 cat1 cat2 cat3 mc">
+						<div class="card project-card">
+							<button class="expander-btn btn btn-link" type="button" data-bs-toggle="collapse"
+								data-bs-target="#expander-2" aria-expanded="false" aria-controls="expander-2">
+								<h4 class="card-title">Client Segmendation</h4>
+							</button>
+							<div class="collapse" id="expander-2">
+								<div class="card-body">
+									<section id="overview">
+										<h5>Project Overview</h5>
+										<p>The objective of this project is to leverage data from the Continente Card,
+											Portugal's largest loyalty program, to support the strategic initiatives of
+											the Marketing, Commercial, and Operational areas. This involves the
+											application of advanced Machine Learning models and statistical
+											methodologies to gain insights and interpret complex relationships within
+											the Continente Card data.</p>
+									</section>
+
+									<section id="role-contributions">
+										<h5>My Role and Contributions</h5>
+										<p>As a Data Scientist specializing in Customer Behavior within the Advanced
+											Analytics and Insight team, my contributions to this project encompass:</p>
+										<ul>
+											<li>Utilizing supervised and unsupervised Machine Learning models and text
+												extraction techniques to support strategic planning</li>
+											<li>Applying advanced statistical methodologies to generate actionable
+												insights</li>
+											<li>Adapting techniques to address specific challenges, including handling
+												large volumes of data and streaming modeling</li>
+											<li>Automating processes and implementing quality control methodologies for
+												data and model performance</li>
+											<li>Building predictive and segmentation models such as RFM segmentation,
+												churn prediction, sentiment analysis, recommendation engines, next best
+												offer, and propensity score models</li>
+											<li>Implementing, maintaining, and improving models using various algorithms
+												and techniques</li>
+											<li>Leveraging data from multiple sources to enhance regular procedures and
+												actions</li>
+											<li>Providing in-depth analytical support for strategic decision-making</li>
+										</ul>
+									</section>
+
+									<section id="outcome">
+										<h5>Outcome</h5>
+										<p>The collaborative efforts within the Advanced Analytics and Insight team
+											resulted in the successful implementation of various analytical models
+											leveraging Continente Card data. By applying Machine Learning and
+											statistical techniques, we were able to provide actionable insights and
+											support strategic initiatives across Marketing, Commercial, and Operational
+											areas.</p>
+									</section>
+
+									<div class="timeline-skills">
+										<p><strong>Skills:</strong> Machine Learning, Statistical Analysis, Data Mining,
+											Predictive Modeling, Segmentation, Text Analysis, Python, R, SQL, Big Data
+											Technologies, Automation, Model Evaluation, Data Quality Control</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!--//card-->
+					</div>
+					<!--//expander-->
+
+					<!-- Expander 3 -->
+					<div class="expander col-md-12 mb-5 cat1 cat2 cat3 mc">
+						<div class="card project-card">
+							<button class="expander-btn btn btn-link" type="button" data-bs-toggle="collapse"
+								data-bs-target="#expander-3" aria-expanded="false" aria-controls="expander-3">
+								<h4 class="card-title">Lealeft Delivery Optimization</h4>
+							</button>
+							<div class="collapse" id="expander-3">
+								<div class="card-body">
+									<section id="overview">
+										<h5>Project Overview</h5>
+										<p>The primary objective of this project was to develop a predictive model using
+											XGBoost to understand the profitability of leaflet delivery campaigns for
+											parishes. Additionally, an optimization engine was created to automatically
+											generate the delivery list based on budget constraints and prioritization
+											criteria.</p>
+									</section>
+
+									<section id="role-contributions">
+										<h5>My Role and Contributions</h5>
+										<p>I spearheaded the development of the predictive model and optimization
+											engine, working closely with the business team to understand requirements
+											and objectives.</p>
+										<h5>Predictive Model Development</h5>
+										<p>Utilizing XGBoost, I developed a predictive model to estimate the
+											profitability of leaflet delivery campaigns for different parishes. This
+											involved analyzing demographic information and historical campaign data to
+											identify factors influencing campaign success.</p>
+										<h5>Optimization Engine</h5>
+										<p>I designed and implemented an optimization engine that automatically
+											generates the delivery list based on budget constraints(deliver price, paper
+											price...) and prioritization
+											criteria. This involved creating algorithms to maximize campaign
+											effectiveness within resource limitations.</p>
+										<h5>A/B Testing</h5>
+										<p>We conducted A/B tests on similar parishes to validate the effectiveness of
+											the predictive model and optimization engine. This involved comparing
+											campaign outcomes between controlled groups to assess the impact of the
+											implemented strategies.</p>
+										<h5>Streamlit App Development</h5>
+										<p>To facilitate interaction with the predictive model and optimization engine,
+											I developed a Streamlit web application. This allowed the business team to
+											input variables such as weekly parameters, budget constraints, and parish
+											demographics to obtain actionable insights and generate optimized delivery
+											lists.</p>
+									</section>
+
+									<section id="outcome">
+										<h5>Outcome</h5>
+										<p>The implementation of the predictive model and optimization engine resulted
+											in improved efficiency and effectiveness of leaflet delivery campaigns. By
+											accurately assessing profitability and automating the delivery list
+											generation process, the solution enabled the business to optimize resource
+											allocation and maximize campaign impact.</p>
+									</section>
+
+									<div class="timeline-skills">
+										<p><strong>Skills:</strong> XGBoost, Python, Pandas, Streamlit, A/B Testing,
+											Optimization Algorithms, Data Analysis</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!--//card-->
+					</div>
+					<!--//expander-->
+
+					<div class="expander col-md-12 mb-5 cat1 cat2 cat3 ff">
+						<div class="card project-card">
+							<button class="expander-btn btn btn-link" type="button" data-bs-toggle="collapse"
+								data-bs-target="#expander-5" aria-expanded="false" aria-controls="expander-5">
+								<h4 class="card-title">Tailor: Size Recommendation</h4>
+							</button>
+							<div class="collapse" id="expander-5">
+								<div class="card-body">
+									<section id="overview">
+										<h5>Project Overview</h5>
+										<p>TAILOR is the FARFETCH size recommendation engine that provides personalized
+											size recommendations to any user, for any Clothing and Shoe product.</p>
+									</section>
+									<section id="role-contributions">
+										<h5>My Role and Contributions</h5>
+										<p>As a Data Scientist, I developed a sequence model employing LSTM, GRUs, and
+											attention models. This led to a substantial increase in top1-accuracy by
+											22%-45% compared to the previous solution.</p>
+
+										<p>I prototyped, evaluated, and deployed new models in production, contributing
+											to the improvement of business processes. These pipelines are responsible
+											for populating the user features and preparing data for training/evaluation
+											models. These jobs run on a scheduled basis.</p>
+
+										<p>I designed and analyzed AB tests to measure the effectiveness of new models
+											and features. Additionally, I contributed to the ideation and planning of
+											future projects, aligning them with business objectives and priorities.</p>
+									</section>
+									<section id="outcome">
+										<h5>Outcome</h5>
+										<p>Our endeavors culminated in the successful deployment of robust size
+											recommendation models tailored for high-end fashion marketplaces. These
+											models exhibit superior accuracy( increase by 22%-45%) and user
+											coverage(increase of 24.5%) compared to existing
+											solutions.
+										</p>
+										<p>Our model is now integrated into numerous services to enhance personalization
+											across various domains. In recommendation systems, we prioritize suggested
+											products based on the availability of the predicted size for individual
+											users, leveraging a sequence model with attention mechanism for both batch
+											and real-time recommendations. Additionally, in client communications such
+											as back-in-stock notifications, we utilize our size recommendation model to
+											selectively send emails only when the predicted size
+											for the client is replenished in stock.</p>
+									</section>
+									<div class="timeline-skills">
+										<p><strong>Skills:</strong> Databricks, Azure, Python, Pandas, PySpark, Google
+											Big Query, Apache Airflow, MLOps, Pytorch, LSTM, GRUs, Sequence Models,
+											Transformers, Looker, Docker, SQL, Git, Terraform</p>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<!--//card-->
+					</div>
+					<!--//expander-->
+					<div class="expander col-md-12 mb-5 cat1 cat2 cat3 ff">
+						<div class="card project-card">
+							<button class="expander-btn btn btn-link" type="button" data-bs-toggle="collapse"
+								data-bs-target="#expander-6" aria-expanded="false" aria-controls="expander-6">
+								<h4 class="card-title">Tailor Fit Advice: Identify problematic products regarding with
+									Size&Fit </h4>
+							</button>
+							<div class="collapse" id="expander-6">
+								<div class="card-body">
+									<section id="overview">
+										<h5>Project Overview</h5>
+										<p>As part of my onboarding project at FARFETCH, I spearheaded the TAILOR Fit
+											Advice initiative from inception to production deployment. This project
+											aimed to address the high rate of product returns attributed to size and fit
+											issues by automating the generation of fitting advice for products.
+											Leveraging transactional data and predictive modeling, the project aimed to
+											enhance customer experience and reduce return rates.</p>
+									</section>
+
+									<section id="role-contributions">
+										<h5>My Role and Contributions</h5>
+										<p>Throughout the project lifecycle, I took on a multifaceted role, engaging
+											with various stakeholders and leading the end-to-end execution of the
+											project.</p>
+										<h5>Engagement with Business Team:</h5>
+										<p>I initiated discussions with the business team to understand the pain points
+											and requirements surrounding size and fit-related returns. Through proactive
+											communication and collaboration, I gathered insights to shape the project's
+											objectives and scope.</p>
+										<h5>Data Analysis and Model Development:</h5>
+										<p>With a hands-on approach, I conducted comprehensive data analysis, delving
+											into transactional data to identify patterns and trends related to size and
+											fit issues. Leveraging my expertise in statistical analysis and machine
+											learning, I developed predictive models to assess the likelihood of products
+											having size issues, running smaller, or running larger.</p>
+										<h5>Production Deployment:</h5>
+										<p>Driven by a commitment to excellence, I led the seamless transition of the
+											developed models into production systems. Utilizing my skills in Databricks
+											and Apache Airflow, I orchestrated the creation of data pipelines and
+											automation workflows, ensuring the timely delivery of fitting advice to
+											customers.</p>
+									</section>
+
+									<section id="outcome">
+										<h5>Outcome</h5>
+										<p>The successful delivery of the TAILOR Fit Advice project marked a significant
+											milestone, demonstrating the impact of my single-handed efforts in
+											addressing size and fit-related challenges. Through meticulous data analysis
+											and robust model development, the project led to tangible reductions in
+											return rates across both men's and women's shoes categories.</p>
+										<p>Specifically, the implementation of TAILOR Fit Advice resulted in a 7%
+											reduction in return rates for men's shoes and a 3.5% reduction for women's
+											shoes. These reductions signify the effectiveness of the developed models in
+											providing accurate fitting advice to customers, thereby enhancing customer
+											satisfaction and operational efficiency.</p>
+										<p>Moreover, the seamless integration of Databricks and Apache Airflow for
+											production deployment streamlined operations, enabling real-time
+											recommendations to customers and further contributing to the overall success
+											of the project.</p>
+									</section>
+
+
+									<div class="timeline-skills">
+										<p><strong>Skills:</strong> Data Analysis, Predictive Modeling, Statistical
+											Analysis, Bayesian Models, Python, SQL, PySpark, scipy, scikit learn,
+											Looker, Databricks, Apache Airflow</p>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<!--//card-->
+					</div>
+					<!--//expander-->
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer text-center py-4">
+			<small class="copyright">Copyright &copy; <a href="" target="_blank">Vitor Sousa</a></small>
+		</footer>
+
+	</div>
+	<!--//main-wrapper-->
+
+	<!-- Javascript -->
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!--Page Specific JS -->
+	<script type="text/javascript" src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/isotope.pkgd.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/isotope-custom.js"></script>
+
+	<!-- Dark Mode -->
+	<script src="assets/plugins/js-cookie.min.js"></script>
+	<script src="assets/js/dark-mode.js"></script>
+
+	<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+	<script src="assets/js/demo/style-switcher.js"></script>
+	<script src="desable_rightclick.js"></script>
+
+</body>
+
+</html>
