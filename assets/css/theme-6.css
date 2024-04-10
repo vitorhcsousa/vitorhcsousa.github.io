@@ -4855,6 +4855,8 @@ fieldset:disabled .btn {
 }
 
 .card-body {
+    
+    background-color:#f56f0f8e ;
     flex: 1 1 auto;
     padding: 1rem 1rem
 }
@@ -13049,11 +13051,11 @@ a.resume-link:hover {
 }
 
 body.dark-mode {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode .theme-bg-light {
-    background: #262626 !important
+    background: #000910 !important
 }
 
 body.dark-mode h1,
@@ -13141,12 +13143,12 @@ body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
 }
 
 body.dark-mode .header {
-    background: #151419;
-    scrollbar-color: rgba(255, 255, 255, 0.05) #151419
+    background: #000;
+    scrollbar-color: rgba(255, 255, 255, 0.05) #000
 }
 
 body.dark-mode .header::-webkit-scrollbar {
-    background: #151419
+    background: #000
 }
 
 body.dark-mode .header::-webkit-scrollbar-thumb {
@@ -13206,7 +13208,7 @@ body.dark-mode .social-list a .svg-inline--fa {
 }
 
 body.dark-mode .main-wrapper {
-    background: #1b1b1e;
+    background: #000910;
     color: rgba(255, 255, 255, 0.7)
 }
 
@@ -13225,11 +13227,11 @@ body.dark-mode .overview-section .item-desc {
 }
 
 body.dark-mode .testimonial-carousel .item-inner {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode .project-card {
-    background: #262626;
+    background: #000910;
     border: none
 }
 
@@ -13238,7 +13240,7 @@ body.dark-mode .project-card:hover .link-mask {
 }
 
 body.dark-mode .blog-post-card {
-    background: #262626;
+    background: #000910;
     border: none
 }
 
@@ -13263,19 +13265,19 @@ body.dark-mode .filters .type:hover {
 }
 
 body.dark-mode .pricing-table {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode .pricing-table tbody th {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode .pricing-table .pricing-package-title {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode .faq-accordion .accordion-item {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode .faq-accordion .card-toggle {
@@ -13303,7 +13305,7 @@ body.dark-mode .faq-accordion .accordion-button[aria-expanded="true"] {
 }
 
 body.dark-mode .faq-accordion .accordion-body {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode a.resume-link {
@@ -13327,7 +13329,7 @@ body.dark-mode .metric-desc {
 }
 
 body.dark-mode .client-quote {
-    background: #262626
+    background: #000910
 }
 
 body.dark-mode .blog-list .item .title a {
@@ -13589,7 +13591,6 @@ body {
 }
 
 .expander + .isotope-item {
-    
     position: relative !important; /* Ensure relative positioning */
     clear: both; /* Clear any floating elements after the expander */
 }
