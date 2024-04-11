@@ -711,6 +711,18 @@ progress {
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-top: var(--bs-gutter-y)
 }
+.rowdd {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5)
+}
+.rowdd>* {
+    flex-shrink: 0;
+}
 
 .col {
     flex: 1 0 0%
@@ -4856,9 +4868,10 @@ fieldset:disabled .btn {
 
 .card-body {
     
-    background-color:#f56f0f8e ;
+    background-color:#ff8d3cb6 ;
     flex: 1 1 auto;
-    padding: 1rem 1rem
+    padding: 1rem 1rem; 
+    height: 110px;
 }
 
 .card-title {
@@ -12342,7 +12355,8 @@ textarea.form-control {
     background: #fafafa;
     border: 1px solid rgba(0, 0, 0, 0.025);
     position: relative;
-    height: 100%
+    height: 100%;
+    margin-top: 10px
 }
 
 .project-card:hover .link-mask {
@@ -12370,6 +12384,12 @@ textarea.form-control {
     max-height: 200px;
     overflow: hidden;
     vertical-align: middle
+}
+
+.project-card .card-img-holder-dd {
+    height: 110px;
+    overflow: hidden;
+    vertical-align: middle;
 }
 
 .project-card .link-mask {
@@ -13209,7 +13229,7 @@ body.dark-mode .social-list a .svg-inline--fa {
 
 body.dark-mode .main-wrapper {
     background: #000910;
-    color: rgba(255, 255, 255, 0.7)
+    color: rgba(255, 255, 255)
 }
 
 body.dark-mode .main-wrapper>.cta-section {
@@ -13249,7 +13269,7 @@ body.dark-mode .blog-post .blockquote {
 }
 
 body.dark-mode .filters .type {
-    color: rgba(255, 255, 255, 0.4)
+    color: rgba(255, 255, 255, 0.8)
 }
 
 body.dark-mode .filters .type.active {
